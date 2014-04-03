@@ -18,13 +18,16 @@ module.exports = function(grunt) {
             done = this.async();
 
         var kssCmd = ['node'],
-            realPath = path.dirname(__filename).replace(/tasks$/g, '');
+            realPath = path.dirname(__filename).replace(/tasks$/g, ''),
+            sass = require(realPath + '/lib/sass'),
+            dest = process.cwd();
 
         var opts = this.options({
             template: null,
             includeType: null,
             includePath: null,
-            mask: null
+            mask: null,
+            scssRoot: []
         });
 
         kssCmd.push(realPath + 'node_modules/kss/bin/kss-node');
@@ -32,6 +35,7 @@ module.exports = function(grunt) {
         this.files.forEach(function(file) {
             kssCmd.push(file.src[0]);
             kssCmd.push(file.dest);
+            dest = file.dest;
         });
 
         if (opts.template !== null) {
@@ -52,6 +56,22 @@ module.exports = function(grunt) {
                 grunt.log.error('Code: ' + code);
             } else {
                 grunt.log.write(result);
+            }
+
+            // Compile scss file if include type is "scss".
+            if (opts.includeType === 'scss' && path.extname(opts.includePath) === '.scss') {
+                opts.scssRoot = opts.scssRoot.map(function(root) {
+                    return path.resolve(process.cwd() + '/' + root);
+                });
+
+                grunt.log.writeln('Scss includes compilation.');
+                grunt.log.writeln(opts.includePath + ' -> ' + dest.replace(/\/$/, '') + '/public/style.css');
+
+                grunt.file.write(
+                    dest.replace(/\/$/, '') + '/public/style.css',
+                    sass.compile(opts.includePath, opts.scssRoot, 'compressed'),
+                    {encoding: 'utf8'}
+                );
             }
             done();
         };
