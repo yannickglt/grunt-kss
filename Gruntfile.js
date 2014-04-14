@@ -39,6 +39,16 @@ module.exports = function(grunt) {
                     // dest : src
                     'test/tmp/': ['test/fixtures/']
                 }
+            },
+            scss: {
+                options: {
+                    includeType: 'scss',
+                    includePath: 'test/fixtures/button.scss'
+                },
+                files: {
+                    // dest : src
+                    'test/tmp/': ['test/fixtures/']
+                }
             }
         },
 
