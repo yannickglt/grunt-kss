@@ -76,7 +76,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-+ v0.3.0: Add scss compiler.
++ v0.3.1: Add scss compiler.
 + v0.2.6: Fix "Error: spawn ENOENT" bug for Windows.
 + v0.2.4: Fix kss-node module path.
 + v0.2.3: Bump version.
