@@ -27,7 +27,8 @@ module.exports = function(grunt) {
             includeType: null,
             includePath: null,
             mask: null,
-            scssRoot: []
+            scssRoot: [],
+            outputStyle: 'compressed'
         });
 
         kssCmd.push(realPath + 'node_modules/kss/bin/kss-node');
@@ -69,7 +70,7 @@ module.exports = function(grunt) {
 
                 grunt.file.write(
                     dest.replace(/\/$/, '') + '/public/style.css',
-                    sass.compile(opts.includePath, opts.scssRoot, 'compressed'),
+                    sass.compile(opts.includePath, opts.scssRoot, opts.outputStyle),
                     {encoding: 'utf8'}
                 );
             }
