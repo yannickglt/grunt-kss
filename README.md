@@ -1,13 +1,13 @@
 # grunt-kss
 
-[![Build Status](https://secure.travis-ci.org/t32k/grunt-kss.png?branch=master)](http://travis-ci.org/t32k/grunt-kss) 
-[![NPM version](https://badge.fury.io/js/grunt-kss.png)](http://badge.fury.io/js/grunt-kss)
-[![Dependency Status](https://david-dm.org/t32k/grunt-kss.png)](https://david-dm.org/t32k/grunt-kss)
+[![Build Status](https://secure.travis-ci.org/t32k/grunt-kss.svg?branch=master)](http://travis-ci.org/t32k/grunt-kss) 
+[![NPM version](https://badge.fury.io/js/grunt-kss.svg)](http://badge.fury.io/js/grunt-kss)
+[![Dependency Status](https://david-dm.org/t32k/grunt-kss.svg)](https://david-dm.org/t32k/grunt-kss)
 
 > KSS styleguide generator for grunt.
 
 ## Getting Started
-This plugin requires Grunt `~0.4.2`
+This plugin requires Grunt `~0.4.x`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -70,12 +70,12 @@ Default value: `null`
 
 A string value that is used to use a custom mask for detecting stylesheets.
 
-
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 
++ v0.4.0: Add option `outputStyle`.
 + v0.3.1: Add scss compiler.
 + v0.2.6: Fix "Error: spawn ENOENT" bug for Windows.
 + v0.2.4: Fix kss-node module path.
