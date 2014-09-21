@@ -21,10 +21,10 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-kss');
 ```
 
-## The "kss" task
+## The "kss" config and an example task
 
 ### Overview
-In your project's Gruntfile, add a section named `kss` to the data object passed into `grunt.initConfig()`.
+To set up the kss config, add a section named `kss` to the data object passed into `grunt.initConfig()`, in your project's Gruntfile.
 
 ```js
 grunt.initConfig({
@@ -41,6 +41,18 @@ grunt.initConfig({
   }
 })
 ```
+
+Then, once you've added the config information above, you can add the kss build step to an existing task (not shown) or can create your own task. Here is an example task that you can create:
+
+```js
+grunt.registerTask('styleguide', [
+  // Add other tasks here if needed
+  'kss'
+  // Add other tasks here if needed
+]);
+```
+
+Finally, you can call kss by running `grunt styleguide`.
 
 ### Options
 
