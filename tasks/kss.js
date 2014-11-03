@@ -90,6 +90,7 @@ module.exports = function(grunt) {
         };
 
         // Execute!!
+      console.log(kssCmd.join(' '));
         exec(kssCmd.join(' '), putInfo);
         grunt.verbose.ok('`[KSS] ' + kssCmd.join(' ') + '` was initiated.');
 
