@@ -42,7 +42,7 @@ module.exports = function(grunt) {
             },
             scss: {
                 options: {
-                    includeType: 'scss',
+                    includeType: 'sass',
                     includePath: 'test/fixtures/button.scss'
                 },
                 files: {

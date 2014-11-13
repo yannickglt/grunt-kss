@@ -82,52 +82,25 @@ Default value: `null`
 
 A string value that is used to use a custom mask for detecting stylesheets.
 
-##Basic Usage Example
-```
-/*
-Buttons
+#### options.loadPath
+Type: `String` or `Array`
+Default value: `null`
 
-Basic button styles
+Include a load path for preprocessor imports
+Currently only sass is supported.
 
-:hover - Highlight the button when hovering.
-.disabled - Disabled button
-.secondary-button - Secondary button styles
+#### options.helpers
+Type: `String`
+Default value: `null`
 
-Markup:
-<a href="#" class="button {$modifiers}">Link</a>
+Specify the location of custom handlebars helpers; see
+http://bit.ly/kss-helpers   
+                   
+#### options.config
+Type: `String`
+Default value: `null`
 
-Styleguide 2.0
-*/
-
-.button{
-  background: red;
-  color: #fff;
-  line-height: 40px;
-  padding: 0 30px;
-  display: inline-block;
-  text-align: center;
-}
-
-.button:hover{
-  background: green;
-  color: #fff;
-}
-
-.button.disabled {
-    background: #ccc;
-}
-
-.button.disabled:hover {
-    background: #ccc;
-}
-
-.button.secondary-button{
-    background: white;
-    color: red;
-    outline: 1px solid red;
-    outline-offest: 1px;
-}
-```
+Load the kss-node configuration from a json file
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
