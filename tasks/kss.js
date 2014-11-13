@@ -30,6 +30,12 @@ module.exports = function(grunt) {
             scssRoot: [],
             outputStyle: 'compressed'
         });
+        
+        // Allow sub tasks to override includePath
+        if (this.data.includePath) {
+            opts.includePath = this.data.includePath;
+        }
+
 
         kssCmd.push(realPath + 'node_modules/kss/bin/kss-node');
 
