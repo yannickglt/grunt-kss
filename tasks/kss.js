@@ -26,6 +26,9 @@ module.exports = function(grunt) {
             template: null,
             includeType: null,
             includePath: null,
+            loadPath: null,
+            helpers: null,
+            config: null,
             mask: null,
             scssRoot: [],
             outputStyle: 'compressed'
@@ -56,6 +59,15 @@ module.exports = function(grunt) {
         if (opts.includeType !== null && opts.includePath !== null) {
             kssCmd.push('--' + opts.includeType, opts.includePath);
         }
+        if (opts.loadPath!== null) {
+            kssCmd.push('--load-path', opts.loadPath);
+        }
+        if (opts.helpers!== null) {
+            kssCmd.push('--helpers', opts.helpers);
+        }
+        if (opts.config!== null) {
+            kssCmd.push('--config', opts.config);
+        }
 
         var putInfo = function(error, result, code) {
             if (error !== null) {
@@ -84,6 +96,7 @@ module.exports = function(grunt) {
         };
 
         // Execute!!
+      console.log(kssCmd.join(' '));
         exec(kssCmd.join(' '), putInfo);
         grunt.verbose.ok('`[KSS] ' + kssCmd.join(' ') + '` was initiated.');
 
