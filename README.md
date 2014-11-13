@@ -68,7 +68,7 @@ A string value that is used to compile and include to build your style.
 Type: `String`
 Default value: `null`
 
-A string value that is used to specify incluede stylesheet path.
+A string value that is used to specify include stylesheet path.
 
 #### options.template
 Type: `String`
