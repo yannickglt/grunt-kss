@@ -60,7 +60,7 @@ Finally, you can call kss by running `grunt styleguide`.
 Type: `String`
 Default value: `null`
 
-`style, less, stylus, sass, css`
+`style, less, stylus, scss, css`
 
 A string value that is used to compile and include to build your style.
 
@@ -87,7 +87,7 @@ Type: `String` or `Array`
 Default value: `null`
 
 Include a load path for preprocessor imports
-Currently only sass is supported.
+Currently only scss is supported.
 
 #### options.helpers
 Type: `String`
