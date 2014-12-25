@@ -30,8 +30,7 @@ To set up the kss config, add a section named `kss` to the data object passed in
 grunt.initConfig({
   kss: {
     options: {
-      includeType: 'css',
-      includePath: '/path/to/include.css',
+      css: '/path/to/style.css',
     },
     dist: {
 	    files: {
@@ -39,7 +38,7 @@ grunt.initConfig({
 	    }
   	}
   }
-})
+});
 ```
 
 Then, once you've added the config information above, you can add the kss build step to an existing task (not shown) or can create your own task. Here is an example task that you can create:
@@ -56,25 +55,18 @@ Finally, you can call kss by running `grunt styleguide`.
 
 ### Options
 
-#### options.includeType
-Type: `String`
-Default value: `null`
-
-`style, less, stylus, scss, css`
-
-A string value that is used to compile and include to build your style.
-
-#### options.includePath
-Type: `String`
-Default value: `null`
-
-A string value that is used to specify include stylesheet path.
-
 #### options.template
 Type: `String`
 Default value: `null`
 
 A string value that is used to use a custom template to build your styleguide.
+
+#### options.helpers
+Type: `String`
+Default value: `null`
+
+Specify the location of custom handlebars helpers; see
+http://bit.ly/kss-helpers
 
 #### options.mask
 Type: `String`
@@ -82,31 +74,25 @@ Default value: `null`
 
 A string value that is used to use a custom mask for detecting stylesheets.
 
-#### options.loadPath
-Type: `String` or `Array`
-Default value: `null`
-
-Include a load path for preprocessor imports
-Currently only scss is supported.
-
-#### options.helpers
+#### options.css
 Type: `String`
 Default value: `null`
 
-Specify the location of custom handlebars helpers; see
-http://bit.ly/kss-helpers   
+A string value that is used to use including a CSS stylesheet for your styleguide.
                    
 #### options.config
 Type: `String`
 Default value: `null`
 
-Load the kss-node configuration from a json file
+Load the kss-node configuration from a JSON file
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
+
 ## Release History
 
++ v1.0.0: API is changed.
 + v0.4.0: Add option `outputStyle`.
 + v0.3.1: Add scss compiler.
 + v0.2.6: Fix "Error: spawn ENOENT" bug for Windows.

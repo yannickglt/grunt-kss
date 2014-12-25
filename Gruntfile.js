@@ -24,37 +24,31 @@ module.exports = function (grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['test/tmp/'],
+      tests: ['test/tmp_*'],
     },
 
     // Configuration to be run (and then tested).
     kss: {
-      options: {
-        includeType: 'css',
-        includePath: 'test/fixtures/button.css'
-      },
       dist: {
         files: {
           // dest : src
-          'test/tmp/': ['test/fixtures/']
+          'test/tmp_dist': ['test/fixtures']
         }
       },
-      scss: {
+      css: {
         options: {
-          includeType: 'sass',
-          includePath: 'test/fixtures/button.scss'
+          css: 'test/fixtures/styles.css'
         },
         files: {
-          // dest : src
-          'test/tmp/': ['test/fixtures/']
+          'test/tmp_css': ['test/fixtures']
         }
       }
     },
 
     // Unit tests.
     nodeunit: {
-      tests: ['test/*_test.js'],
-    },
+      tests: ['test/*_test.js']
+    }
 
   });
 
