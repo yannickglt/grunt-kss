@@ -28,8 +28,8 @@ exports.kss = {
   },
   dist: function (test) {
     test.expect(1);
-    var expected = grunt.file.read('test/expected/dist/section-1.html');
-    var actual = grunt.file.read('test/tmp_dist/section-1.html');
+    var expected = grunt.file.read('test/expected/dist/section-components.html');
+    var actual = grunt.file.read('test/tmp_dist/section-components.html');
     test.equal(actual, expected, 'should generate style guide.');
     test.done();
   }
