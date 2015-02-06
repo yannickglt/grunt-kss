@@ -32,12 +32,5 @@ exports.kss = {
     var actual = grunt.file.read('test/tmp_dist/section-1.html');
     test.equal(actual, expected, 'should generate style guide.');
     test.done();
-  },
-  css: function (test) {
-    test.expect(1);
-    var expected = grunt.file.read('test/expected/css/style.css');
-    var actual = grunt.file.read('test/tmp_css/public/style.css');
-    test.equal(actual, expected, 'should include css file.');
-    test.done();
   }
 };
