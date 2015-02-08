@@ -74,12 +74,24 @@ Default value: `null`
 
 A string value that is used to use a custom mask for detecting stylesheets.
 
+#### options.custom
+Type: `String`
+Default value: `null`
+
+A string value that is used to use a custom property name when parsing KSS comments.
+
 #### options.css
 Type: `String`
 Default value: `null`
 
 A string value that is used to use including a CSS stylesheet for your styleguide.
-                   
+
+#### options.js
+Type: `String`
+Default value: `null`
+
+A string value that is used to use including a JavaScript file for your styleguide.
+
 #### options.config
 Type: `String`
 Default value: `null`

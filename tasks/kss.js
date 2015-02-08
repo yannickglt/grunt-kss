@@ -25,7 +25,9 @@ module.exports = function (grunt) {
       template: null,
       helpers: null,
       mask: null,
+      custom: null,
       css: null,
+      js: null,
       config: null
     });
 
@@ -46,8 +48,14 @@ module.exports = function (grunt) {
     if (opts.mask !== null) {
       kssCmd.push('--mask', opts.mask);
     }
+    if (opts.custom !== null) {
+      kssCmd.push('--custom', opts.custom);
+    }
     if (opts.css !== null) {
       kssCmd.push('--css', opts.css);
+    }
+    if (opts.js !== null) {
+      kssCmd.push('--js', opts.js);
     }
     if (opts.config !== null) {
       kssCmd.push('--config', opts.config);

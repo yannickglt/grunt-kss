@@ -34,14 +34,6 @@ module.exports = function (grunt) {
           // dest : src
           'test/tmp_dist': ['test/fixtures']
         }
-      },
-      css: {
-        options: {
-          css: 'test/fixtures/styles.css'
-        },
-        files: {
-          'test/tmp_css': ['test/fixtures']
-        }
       }
     },
 
