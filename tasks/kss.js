@@ -10,7 +10,7 @@
 
 module.exports = function (grunt) {
 
-  grunt.registerMultiTask('kss', 'Generate styleguide by node-kss.', function () {
+  grunt.registerMultiTask('kss', 'Generate style guide by kss-node.', function () {
 
     var fs = require('fs'),
       path = require('path'),

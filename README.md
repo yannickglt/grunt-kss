@@ -100,16 +100,3 @@ Load the kss-node configuration from a JSON file
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-
-## Release History
-
-+ v1.0.0: API is changed.
-+ v0.4.0: Add option `outputStyle`.
-+ v0.3.1: Add scss compiler.
-+ v0.2.6: Fix "Error: spawn ENOENT" bug for Windows.
-+ v0.2.4: Fix kss-node module path.
-+ v0.2.3: Bump version.
-+ v0.2.2: Fix README.
-+ v0.2.0: Fix a cmd path.
-+ v0.1.0: Release.
